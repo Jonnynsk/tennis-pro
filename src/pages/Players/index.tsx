@@ -15,27 +15,40 @@ const players = [
     photo: medvedev,
     firstName: "Daniil",
     lastName: "Medvedev",
-    age: "27",
+    age: "02.11.1996",
     birthday: "11.02.1996",
     country: russia,
+    currentRank: 7,
+    singlesCurrentRank: "7",
+    singlesHighestRank: "1",
+    doublesCurrentRank: "-",
+    doublesHighestRank: "3",
   },
   {
     id: 2,
     photo: djokovic,
     firstName: "Novak",
     lastName: "Djokovic ",
-    age: "35",
+    age: "05.22.1987",
     birthday: "22.05.1987",
     country: serbia,
+    singlesCurrentRank: "1",
+    singlesHighestRank: "1",
+    doublesCurrentRank: "-",
+    doublesHighestRank: "1",
   },
   {
     id: 3,
     photo: tsitsipas,
     firstName: "Stefanos",
     lastName: "Tsitsipas",
-    age: "24",
+    age: "08.12.1998",
     birthday: "12.08.1998",
     country: greece,
+    singlesCurrentRank: "3",
+    singlesHighestRank: "3",
+    doublesCurrentRank: "124",
+    doublesHighestRank: "6",
   },
 ];
 
@@ -46,12 +59,16 @@ export const Players = () => {
         return (
           <Card
             key={player.id}
-            age={player.age}
             firstName={player.firstName}
             lastName={player.lastName}
+            age={player.age}
             birthday={player.birthday}
             country={player.country}
             photo={player.photo}
+            singlesCurrentRank={player.singlesCurrentRank}
+            singlesHighestRank={player.singlesHighestRank}
+            doublesCurrentRank={player.doublesCurrentRank}
+            doublesHighestRank={player.doublesHighestRank}
           />
         );
       })}
